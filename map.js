@@ -41,6 +41,11 @@ export async function initMap(mapboxgl) {
       placeResultsBelowRoads(map);
       // Wire up filter UI
       initFilterBindings();
+      // Initial show/hide based on default mode
+      const controls = document.getElementById('demo-controls');
+      if (controls) controls.style.display = (renderMode === 'custom') ? 'grid' : 'none';
+      const filterBox = document.getElementById('filterBox');
+      if (filterBox) filterBox.style.display = (renderMode === '2024') ? 'block' : 'none';
     });
 
     // Update feature states when map moves
@@ -439,6 +444,8 @@ function bindModeToggle() {
       computeTotals();
       const controls = document.getElementById('demo-controls');
       if (controls) controls.style.display = (renderMode === 'custom') ? 'grid' : 'none';
+      const filterBox = document.getElementById('filterBox');
+      if (filterBox) filterBox.style.display = (renderMode === '2024') ? 'block' : 'none';
       // Re-apply filters because margin field changes by mode
       applyMapFilters();
     });

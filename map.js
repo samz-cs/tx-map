@@ -22,9 +22,9 @@ export async function initMap(mapboxgl) {
   popup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false });
 
 
-
   // Load CSV data
   await loadCsvIndex('./TX_24_with_counties_with_area.csv');
+  console.log("csv loaded")
 
   map.on('style.load', () => {
     addBaseLayers(map);

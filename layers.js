@@ -1,6 +1,6 @@
 export function addBaseLayers(map) {
   map.addSource('route', { type: 'vector', url: 'mapbox://tosamuel.aybsj38o' });
-
+  console.log("addBaseLayers called")
   map.addLayer({
     id: 'results_layer',
     type: 'fill',

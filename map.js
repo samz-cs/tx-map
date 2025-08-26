@@ -24,7 +24,7 @@ export async function initMap(mapboxgl) {
 
 
   // Load CSV data
-  await loadCsvIndex('/TX_24_with_counties_with_area.csv');
+  await loadCsvIndex('TX_24_with_counties_with_area.csv');
 
   map.on('style.load', () => {
     addBaseLayers(map);

@@ -21,12 +21,12 @@ export async function initMap(mapboxgl) {
   // Moving popup for hover info
   popup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false });
 
+  // Kick off CSV load in parallel (do not block style event registration)
+  const csvPromise = loadCsvIndex('./TX_24_with_counties_with_area.csv')
+    .then(() => console.log("csv loaded"))
+    .catch((err) => console.error('CSV load failed', err));
 
-  // Load CSV data
-  await loadCsvIndex('./TX_24_with_counties_with_area.csv');
-  console.log("csv loaded")
-
-  map.on('style.load', () => {
+  const setupAfterStyleLoad = () => {
     addBaseLayers(map);
     addCountyLayers(map);
     updateFillPaint(map, false); // Start with 2024 data
@@ -65,6 +65,22 @@ export async function initMap(mapboxgl) {
 
     // Initialize zoom indicator once everything is ready
     updateZoomIndicator();
+  };
+
+  // Register style.load ASAP
+  map.on('style.load', setupAfterStyleLoad);
+  // If style already loaded (fast on CDNs), run setup immediately
+  if (map.isStyleLoaded && map.isStyleLoaded()) {
+    setupAfterStyleLoad();
+  }
+
+  // Once CSV is in, ensure feature states/totals are computed at least once
+  csvPromise.then(() => {
+    if (map.isStyleLoaded && map.isStyleLoaded()) {
+      try { updateFeatureStatesForVisible(); computeTotals(); } catch {}
+    } else {
+      map.once('style.load', () => { try { updateFeatureStatesForVisible(); computeTotals(); } catch {} });
+    }
   });
 }
 

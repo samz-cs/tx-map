@@ -38,3 +38,4 @@ This app visualizes Texas 2024 precinct results with interactive hovers, county 
 - GeoPandas and Python for geographic/demographic data reaggregation and joining
 - Various MapBox APIs for hosting Tilesets on their platform
 
+

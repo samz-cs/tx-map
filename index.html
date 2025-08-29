@@ -170,8 +170,7 @@ body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, Se
 <script src="./config.js"></script>
 <script type="module">
   import { initMap } from './map.js';
-  window.mapboxgl.accessToken = 
-  'pk.eyJ1IjoidG9zYW11ZWwiLCJhIjoiY21ldDZtOHIwMDhseTJ2cTFma21yOGI1ZiJ9.bsinqymNAPBCplUkdCtyNg';
+  window.mapboxgl.accessToken = window.APP_CONFIG.MAPBOX_ACCESS_TOKEN;
   initMap(window.mapboxgl);
   console.log("initmap called")
 </script>

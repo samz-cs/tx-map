@@ -1,0 +1,50 @@
+<h1 id="texas-precinct-map--usage-guide">Texas Precinct Map Usage Guide</h1>
+<p>This app visualizes Texas 2024 precinct results with interactive hovers, county rollups, and demographic filters. This was inspired by the NYT's <a href="https://www.nytimes.com/interactive/2025/us/elections/2024-election-map-precinct-results.html">extremely detailed map of the 2024 election results</a>. I spent hours exploring it and thought it would be fun to make my own version with more interactive features and more detailed demographic data.</p>
+<h2 id="what-you-see">What you see</h2>
+<ul>
+<li>Colored precincts (2024): color ramp based on Democratic margin from the CSV.</li>
+<li>Hover popups:<ul>
+<li>Zoom > 8: shows precinct details (county, GEOID, area if available, 2024 margin, votes).</li>
+<li>Zoom <= 8: shows county-wide rollup (sum of votes across that county from the CSV).</li>
+</ul>
+</li>
+<li>Outlines:<ul>
+<li>Zoom > 8: black outline for hovered precinct only.</li>
+<li>Zoom <= 8: black outline for hovered county only.</li>
+</ul>
+</li>
+<li>Summary (top-left): statewide totals for all precincts by default, or the subset matching your filters.</li>
+<li>Zoom box (bottom-left): live zoom value.</li>
+</ul>
+<h2 id="controls-top-right">Controls (top-right)</h2>
+<ul>
+<li>Filters (2024):<ul>
+<li>Each filter has an operator (&gt;) or (&lt;) and a percent value.</li>
+<li>Leave a value blank to ignore that filter.</li>
+<li>Press Enter in a field or click “Apply” to filter.</li>
+<li>Click "Clear" to reset values and return to statewide totals.</li>
+</ul>
+</li>
+<li>Available filter fields (percentages computed from the CSV):<ul>
+<li>Hisp% = hispvap / vap</li>
+<li>Asian% = asianvap / vap</li>
+<li>Black% = blackvap / vap</li>
+<li>Anglo% = anglovap / vap</li>
+<li>Dem margin% (2024) = (votes_dem - votes_rep) / votes_total * 100</li>
+<li>College enroll% = college_enroll / vap</li>
+<li>Bachelors+% = bachelors_up_total_sum / vap</li>
+</ul>
+</li>
+</ul>
+<h2 id="data-sources">Data sources</h2>
+<ul>
+<li>Race demographic data is from the Texas Legislative Council&#39;s <a href="https://data.capitol.texas.gov/dataset/vtds">website</a></li>
+<li>Precinct shapes and election results are from the Texas data set of the NYT&#39;s <a href="https://github.com/nytimes/presidential-precinct-map-2024">Github</a></li>
+<li>college enrollment and educational attainment data are from Census tracts and blocks obtained from the NHGIS datasets <a href="https://data2.nhgis.org/main">here</a>. Census block and tract shapes useed for calculations were also from here.</li>
+</ul>
+<h2 id="tech-stack">Tech Stack</h2>
+<ul>
+<li>JavaScript for UI functionality and MapBox for rendering</li>
+<li>GeoPandas and Python for geographic/demographic data reaggregation and joining</li>
+<li>Various MapBox APIs for hosting Tilesets on their platform</li>
+</ul>

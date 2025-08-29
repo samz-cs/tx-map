@@ -111,11 +111,7 @@ body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, Se
   <div class="title">Loading...</div>
 </div>
 <div id="controlBox">
-  <div id="modeToggle">
-    <label><input type="radio" name="mode" value="2024" checked> 2024 actual</label>
-    <label><input type="radio" name="mode" value="custom"> Custom demographics</label>
-  </div>
-  <div id="sliderBox"></div>
+  <div id="modeToggle" style="display:none;"></div>
   <div id="filterBox" style="margin-top:10px; border-top:1px solid #eee; padding-top:8px;">
     <div style="font-weight:600; margin-bottom:6px;">Filters (press Enter to apply)</div>
     <div style="display:grid; grid-template-columns:auto 48px 24px 80px; gap:6px; align-items:center;">
@@ -169,7 +165,7 @@ body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, Se
 
 <script src="./config.js"></script>
 <script type="module">
-  import { initMap } from './map.js';
+  import { init as initMap } from './map_funcs/init.js';
   window.mapboxgl.accessToken = window.APP_CONFIG.MAPBOX_ACCESS_TOKEN;
   initMap(window.mapboxgl);
   console.log("initmap called")

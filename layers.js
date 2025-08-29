@@ -26,8 +26,8 @@ export function addBaseLayers(map) {
 }
 
 
-export function updateFillPaint(map, useCustom = false) {
-  const csvMargin = ['feature-state', useCustom ? 'custom_margin' : 'csv_margin24'];
+export function updateFillPaint(map) {
+  const csvMargin = ['feature-state', 'csv_margin24'];
   const margin24 = ['to-number', ['coalesce', ['get', 'pct_dem_lead'], 0]];
   const fillValue = ['coalesce', csvMargin, margin24];
   const expr = ['step', fillValue,
@@ -89,6 +89,9 @@ export function placeResultsBelowRoads(map) {
     // Keep hover outlines on top for visibility
     const lastLayerId = style.layers[style.layers.length - 1]?.id;
     if (lastLayerId) {
+      // Ensure county hit layer sits high for pointer events
+      if (map.getLayer('counties-fill')) map.moveLayer('counties-fill', lastLayerId);
+      // Then put outlines last
       if (map.getLayer('hover-outline')) map.moveLayer('hover-outline', lastLayerId);
       if (map.getLayer('county-hover-outline')) map.moveLayer('county-hover-outline', lastLayerId);
     }

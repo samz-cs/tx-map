@@ -31,7 +31,7 @@ This app visualizes Texas 2024 precinct results with interactive hovers, county 
 ## Data sources
 - Race demographic data is from the Texas Legislative Council's [website](https://data.capitol.texas.gov/dataset/vtds)
 - Precinct shapes and election results are from the Texas data set of the NYT's [Github](https://github.com/nytimes/presidential-precinct-map-2024)
-- college enrollment and educational attainment data are from Census tracts and blocks obtained from the NHGIS datasets [here](https://data2.nhgis.org/main). Census block and tract shapes useed for calculations were also from here.
+- college enrollment and educational attainment data are from Census tracts and blocks obtained from the NHGIS datasets [here](https://data2.nhgis.org/main). Census block and tract shapes used for calculations were also from here.
 
 ## Tech Stack
 - JavaScript for UI functionality and MapBox for rendering

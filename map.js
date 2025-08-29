@@ -22,7 +22,7 @@ export async function initMap(mapboxgl) {
   popup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false });
 
   // Kick off CSV load in parallel (do not block style event registration)
-  const csvPromise = loadCsvIndex('./TX_24_with_counties_with_area.csv')
+  const csvPromise = loadCsvIndex('./test_2.csv')
     .then(() => console.log("csv loaded"))
     .catch((err) => console.error('CSV load failed', err));
 
@@ -99,6 +99,8 @@ function compileFilterFromUI() {
   const blackOp = get('f-black-op')?.value; const blackVal = readNum('f-black-val');
   const angloOp = get('f-anglo-op')?.value; const angloVal = readNum('f-anglo-val');
   const marginOp = get('f-margin-op')?.value; const marginVal = readNum('f-margin-val');
+  const collegeOp = get('f-college-op')?.value; const collegeVal = readNum('f-college-val');
+  const bachOp = get('f-bach-op')?.value; const bachVal = readNum('f-bach-val');
 
   return function predicateForGeoid(geoid) {
     const row = csvByGeoid.get(String(geoid));
@@ -109,6 +111,8 @@ function compileFilterFromUI() {
     const asian = (n(row['asianvap']) / vap) * 100;
     const black = (n(row['blackvap']) / vap) * 100;
     const anglo = (n(row['anglovap']) / vap) * 100;
+    const college = (n(row['college_enroll']) / vap) * 100;
+    const bachplus = (n(row['bachelors_up_total_sum']) / vap) * 100;
     let marginPct;
     if (renderMode === '2024') {
       const d24 = n(row['votes_dem']);
@@ -132,7 +136,9 @@ function compileFilterFromUI() {
       cmp(asianOp, asian, asianVal) &&
       cmp(blackOp, black, blackVal) &&
       cmp(angloOp, anglo, angloVal) &&
-      cmp(marginOp, marginPct, marginVal)
+      cmp(marginOp, marginPct, marginVal) &&
+      cmp(collegeOp, college, collegeVal) &&
+      cmp(bachOp, bachplus, bachVal)
     );
   };
 }
@@ -153,7 +159,7 @@ function applyMapFilters() {
 
 function initFilterBindings() {
   const inputs = [
-    'f-hisp-op','f-hisp-val','f-asian-op','f-asian-val','f-black-op','f-black-val','f-anglo-op','f-anglo-val','f-margin-op','f-margin-val'
+    'f-hisp-op','f-hisp-val','f-asian-op','f-asian-val','f-black-op','f-black-val','f-anglo-op','f-anglo-val','f-margin-op','f-margin-val','f-college-op','f-college-val','f-bach-op','f-bach-val'
   ];
   const apply = () => { currentFilter = compileFilterFromUI(); applyMapFilters(); };
   inputs.forEach(id => {

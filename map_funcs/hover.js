@@ -18,6 +18,16 @@ export function bindPrecinctHover() {
     const data = derive2024FromCsvRow(row);
     const marginStr = data && Number.isFinite(data.margin)
       ? `${((data.margin) * 100 >= 0 ? '+' : '')}${((data.margin) * 100).toFixed(1)}%` : '—';
+    // 2020 vs 2024 shift (pp)
+    const n = (v) => { const x = Number(v); return Number.isFinite(x) ? x : 0; };
+    const dem20 = n(row && row['20_biden']);
+    const rep20 = n(row && row['20_trump']);
+    const t20 = n(row && row['20_total']);
+    const margin20Pct = t20 > 0 ? ((dem20 - rep20) / t20) * 100 : n(row && row['pct_dem_lead_20']) * 100;
+    const margin24Pct = data && Number.isFinite(data.margin) ? data.margin * 100 : NaN;
+    const shiftStr = Number.isFinite(margin24Pct) && Number.isFinite(margin20Pct)
+      ? `${((margin24Pct - margin20Pct) >= 0 ? '+' : '')}${(margin24Pct - margin20Pct).toFixed(1)} pp`
+      : '—';
     const votesDemStr = data ? formatNumber(Math.round(data.dem)) : 'N/A';
     const votesRepStr = data ? formatNumber(Math.round(data.rep)) : 'N/A';
     const totalStr = data ? formatNumber(Math.round(data.total)) : 'N/A';
@@ -27,6 +37,7 @@ export function bindPrecinctHover() {
       <div class="info-row"><span>GEOID:</span><span>${geoid}</span></div>
       ${row && row.area_sqmi != null && row.area_sqmi !== '' ? `<div class=\"info-row\"><span>Area:</span><span>${Number(row.area_sqmi).toFixed(2)} sq mi</span></div>` : ''}
       <div class="info-row"><span>Dem margin (2024):</span><span>${marginStr}</span></div>
+      <div class="info-row"><span>Shift 20→24:</span><span>${shiftStr}</span></div>
       <div class="info-row"><span>Dem votes:</span><span>${votesDemStr}</span></div>
       <div class="info-row"><span>Rep votes:</span><span>${votesRepStr}</span></div>
       <div class="info-row"><span>Total votes:</span><span>${totalStr}</span></div>
@@ -81,9 +92,27 @@ export function bindCountyHover() {
     const agg = aggregateCounty(rows);
     const marginStr = Number.isFinite(agg.margin)
       ? `${((agg.margin) * 100 >= 0 ? '+' : '')}${((agg.margin) * 100).toFixed(1)}%` : '—';
+    // County-level 20→24 shift (pp)
+    let dem20 = 0, rep20 = 0, t20 = 0, fallback20 = 0, fallbackCount = 0;
+    for (const r of rows) {
+      const d20 = Number(r['20_biden']); const rr20 = Number(r['20_trump']); const tt20 = Number(r['20_total']);
+      if (Number.isFinite(d20) && Number.isFinite(rr20) && Number.isFinite(tt20)) {
+        dem20 += d20; rep20 += rr20; t20 += tt20;
+      } else {
+        const m20 = Number(r['pct_dem_lead_20']);
+        if (Number.isFinite(m20)) { fallback20 += m20; fallbackCount += 1; }
+      }
+    }
+    const margin20Pct = t20 > 0 ? ((dem20 - rep20) / t20) * 100
+      : (fallbackCount > 0 ? (fallback20 / fallbackCount) * 100 : NaN);
+    const margin24Pct = Number.isFinite(agg.margin) ? agg.margin * 100 : NaN;
+    const shiftStr = Number.isFinite(margin24Pct) && Number.isFinite(margin20Pct)
+      ? `${((margin24Pct - margin20Pct) >= 0 ? '+' : '')}${(margin24Pct - margin20Pct).toFixed(1)} pp`
+      : '—';
     const html = `
       <div class="precinct-title">${countyName} (county)</div>
       <div class="info-row"><span>Dem margin (2024):</span><span>${marginStr}</span></div>
+      <div class="info-row"><span>Shift 20→24:</span><span>${shiftStr}</span></div>
       <div class="info-row"><span>Dem votes:</span><span>${formatNumber(Math.round(agg.dem))}</span></div>
       <div class="info-row"><span>Rep votes:</span><span>${formatNumber(Math.round(agg.rep))}</span></div>
       <div class="info-row"><span>Total votes:</span><span>${formatNumber(Math.round(agg.total))}</span></div>

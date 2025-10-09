@@ -1,5 +1,5 @@
 window.APP_CONFIG = {
-  MAPBOX_ACCESS_TOKEN: 'pk.eyJ1IjoidG9zYW11ZWwiLCJhIjoiY21ldDB1bnJ1MDhlNjJqb2Fia280MXd4byJ9.6NCzlA3HhwzUQLOw7wt96Q',
+  MAPBOX_ACCESS_TOKEN: 'pk.eyJ1IjoidG9zYW11ZWwiLCJhIjoiY21ldDB1bnJ1MDhlNjJqb2Fia280MXd4byJ9.6NCzlA3HhwzUQLOw7wt96Q',  
   THIRD_PARTY_SHARE: 0.0084,
   // Counties vector tileset config
   COUNTY_SOURCE_URL: 'mapbox://tosamuel.12053qy8',

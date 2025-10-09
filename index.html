@@ -147,9 +147,9 @@ body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, Se
 <div id="controlBox">
   <div id="modeToggle" style="display:none;"></div>
   <div id="filterBox" style="margin-top:10px; border-top:1px solid #eee; padding-top:8px;">
-    <div style="font-weight:600; margin-bottom:6px;">Filters (press Enter to apply)</div>
+    <div style="font-weight:600; margin-bottom:6px;">Filter precincts by demographics (press Enter to apply)</div>
     <div style="display:grid; grid-template-columns:auto 48px 24px 80px; gap:6px; align-items:center;">
-      <div>Hisp%</div>
+      <div>Hispanic%</div>
       <select id="f-hisp-op"><option value=">" selected>&gt;</option><option value="<">&lt;</option></select>
       <div></div>
       <input id="f-hisp-val" type="number" min="0" max="100" step="1" placeholder="%"/>
@@ -164,25 +164,35 @@ body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, Se
       <div></div>
       <input id="f-black-val" type="number" min="0" max="100" step="1" placeholder="%"/>
 
-      <div>Anglo%</div>
+      <div>White%</div>
       <select id="f-anglo-op"><option value=">" selected>&gt;</option><option value="<">&lt;</option></select>
       <div></div>
       <input id="f-anglo-val" type="number" min="0" max="100" step="1" placeholder="%"/>
 
-      <div>Dem margin%</div>
-      <select id="f-margin-op"><option value=">" selected>&gt;</option><option value="<">&lt;</option></select>
-      <div></div>
-      <input id="f-margin-val" type="number" min="-100" max="100" step="1" placeholder="%"/>
-
-      <div>College Students%</div>
+      <div>College Student%</div>
       <select id="f-college-op"><option value=">" selected>&gt;</option><option value="<">&lt;</option></select>
       <div></div>
       <input id="f-college-val" type="number" min="0" max="100" step="1" placeholder="%"/>
 
-      <div>College Grad%</div>
+      <div>College Educated%</div>
       <select id="f-bach-op"><option value=">" selected>&gt;</option><option value="<">&lt;</option></select>
       <div></div>
       <input id="f-bach-val" type="number" min="0" max="100" step="1" placeholder="%"/>
+
+      <div>margin shift (20 -> 24)</div>
+      <select id="f-shift-op"><option value=">" selected>&gt;</option><option value="<">&lt;</option></select>
+      <div></div>
+      <input id="f-shift-val" type="number" min="-100" max="100" step="1" placeholder="%"/>
+
+      <div>Dem Margin%</div>
+      <select id="f-margin-op"><option value=">" selected>&gt;</option><option value="<">&lt;</option></select>
+      <div></div>
+      <input id="f-margin-val" type="number" min="-100" max="100" step="1" placeholder="%"/>
+
+      <div>Avg Household Income</div>
+      <select id="f-avg_hh_income-op"><option value=">" selected>&gt;</option><option value="<">&lt;</option></select>
+      <div></div>
+      <input id="f-avg_hh_income-val" type="number" step="1000" placeholder="$"/>
     </div>
     <div style="margin-top:6px; display:flex; gap:8px;">
       <button id="applyFilters">Apply</button>

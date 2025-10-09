@@ -16,7 +16,7 @@ export async function init(mapboxgl) {
   appState.map = map;
   appState.popup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false });
 
-  const csvPromise = loadCsvIndex('./test_2.csv')
+  const csvPromise = loadCsvIndex('./demographics.csv')
     .then(() => console.log('csv loaded'))
     .catch((e) => console.error('CSV load failed', e));
 

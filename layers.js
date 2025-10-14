@@ -1,6 +1,6 @@
 export function addBaseLayers(map) {
   console.log("addBaseLayers called")
-  map.addSource('route', { type: 'vector', url: 'mapbox://tosamuel.aybsj38o' });
+  map.addSource('route', { type: 'vector', url: 'mapbox://tosamuel.aybsj38o', promoteId: 'GEOID' });
   console.log("source added")
   map.addLayer({
     id: 'results_layer',
@@ -26,16 +26,48 @@ export function addBaseLayers(map) {
 }
 
 
-export function updateFillPaint(map) {
-  const csvMargin = ['feature-state', 'csv_margin24'];
+export function setFillPaintMargin(map) {
+  const csvMargin = ['feature-state', 'csv_margin_active'];
   const margin24 = ['to-number', ['coalesce', ['get', 'pct_dem_lead'], 0]];
   const fillValue = ['coalesce', csvMargin, margin24];
   const expr = ['step', fillValue,
     '#b83b3b', -0.75, '#d67272', -0.5, '#eba1a1', -0.25, '#ffe6e6',
     0, '#d9f0ff', 0.25, '#a3cde5', 0.5, '#5d9fcc', 0.75, '#2a6db0'
   ];
+  // 2D should NOT show green hover; keep margin palette on 2D layer
   try { map.setPaintProperty('results_layer', 'fill-color', expr); } catch {}
+  try { map.setPaintProperty('results_layer', 'fill-color-transition', { duration: 0 }); } catch {}
+  // 3D hover green for extrusions only
+  const hoverExpr3D = ['case', ['boolean', ['feature-state', 'hovered'], false], '#006400', expr];
+  try { if (map.getLayer('extrusion_layer')) map.setPaintProperty('extrusion_layer', 'fill-extrusion-color', hoverExpr3D); } catch {}
+  try { if (map.getLayer('extrusion_layer')) map.setPaintProperty('extrusion_layer', 'fill-extrusion-color-transition', { duration: 0 }); } catch {}
 }
+
+export function setFillPaintShift(map) {
+  // Shift palette thresholds at 5%, 10%, 15% (fractions 0.05, 0.10, 0.15)
+  const shiftVal = ['to-number', ['coalesce', ['feature-state', 'csv_margin_active'], 0]];
+  const expr = ['step', shiftVal,
+    // < -15%
+    '#b83b3b',
+    -0.15, '#d67272',
+    -0.10, '#eba1a1',
+    -0.05, '#ffe6e6',
+    0.0, '#d9f0ff',
+    0.05, '#a3cde5',
+    0.10, '#5d9fcc',
+    0.15, '#2a6db0'
+  ];
+  // 2D should NOT show green hover; keep shift palette on 2D layer
+  try { map.setPaintProperty('results_layer', 'fill-color', expr); } catch {}
+  try { map.setPaintProperty('results_layer', 'fill-color-transition', { duration: 0 }); } catch {}
+  // 3D hover green for extrusions only
+  const hoverExpr3D = ['case', ['boolean', ['feature-state', 'hovered'], false], '#006400', expr];
+  try { if (map.getLayer('extrusion_layer')) map.setPaintProperty('extrusion_layer', 'fill-extrusion-color', hoverExpr3D); } catch {}
+  try { if (map.getLayer('extrusion_layer')) map.setPaintProperty('extrusion_layer', 'fill-extrusion-color-transition', { duration: 0 }); } catch {}
+}
+
+// Backward compatibility alias
+export const updateFillPaint = setFillPaintMargin;
 
 // Counties source and hover outline
 export function addCountyLayers(map) {

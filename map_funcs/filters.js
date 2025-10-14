@@ -21,6 +21,7 @@ export function compileFilterFromUI() {
   const bachOp = get('f-bach-op')?.value; const bachVal = readNum('f-bach-val');
   const incOp = get('f-avg_hh_income-op')?.value; const incVal = readNum('f-avg_hh_income-val');
   const shiftOp = get('f-shift-op')?.value; const shiftVal = readNum('f-shift-val');
+  const totalOp = get('f-total-op')?.value; const totalVal = readNum('f-total-val');
 
   return function predicateForGeoid(geoid) {
     const row = csvByGeoid.get(String(geoid));
@@ -59,7 +60,8 @@ export function compileFilterFromUI() {
       cmp(collegeOp, college, collegeVal) &&
       cmp(bachOp, bachplus, bachVal) &&
       cmp(incOp, income, incVal) &&
-      cmp(shiftOp, shift2020to2024, shiftVal)
+      cmp(shiftOp, shift2020to2024, shiftVal) &&
+      cmp(totalOp, t24, totalVal)
     );
   };
 }
@@ -68,6 +70,7 @@ export function applyMapFilters() {
   const { map } = appState;
   if (!appState.currentFilter) {
     try { map.setFilter('results_layer', null); } catch {}
+    try { if (map.getLayer('extrusion_layer')) map.setFilter('extrusion_layer', null); } catch {}
     // Show statewide totals when no filter is active
     renderTotals();
     return;
@@ -78,6 +81,7 @@ export function applyMapFilters() {
   }
   const expr = ['in', ['get', 'GEOID'], ['literal', allow]];
   try { map.setFilter('results_layer', expr); } catch {}
+  try { if (map.getLayer('extrusion_layer')) map.setFilter('extrusion_layer', expr); } catch {}
   // Update totals for current predicate
   renderTotals();
 }
@@ -85,7 +89,7 @@ export function applyMapFilters() {
 export function initFilterBindings() {
   const inputs = [
     'f-hisp-op','f-hisp-val','f-asian-op','f-asian-val','f-black-op','f-black-val','f-anglo-op','f-anglo-val','f-margin-op','f-margin-val','f-college-op','f-college-val','f-bach-op','f-bach-val',
-    'f-avg_hh_income-op','f-avg_hh_income-val','f-shift-op','f-shift-val'
+    'f-avg_hh_income-op','f-avg_hh_income-val','f-shift-op','f-shift-val','f-total-op','f-total-val'
   ];
   const apply = () => { appState.currentFilter = compileFilterFromUI(); applyMapFilters(); };
   inputs.forEach(id => {

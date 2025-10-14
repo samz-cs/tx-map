@@ -1,0 +1,1153 @@
+[
+  {
+    "SCHOOL_NM": "Abilene Christian University",
+    "GEOIDs": [
+      "48441-Precinct 402"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Abilene State School",
+    "GEOIDs": [
+      "48441-Precinct 406"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Allen Academy Private",
+    "GEOIDs": [
+      "48041-Precinct 17",
+      "48041-Precinct 25"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Alvin Community College",
+    "GEOIDs": [
+      "48039-Precinct 3",
+      "48039-Precinct 77"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Amarillo College",
+    "GEOIDs": [
+      "48375-Precinct 122",
+      "48375-Precinct 123",
+      "48375-Precinct 324",
+      "48375-Precinct 422"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Angelina College",
+    "GEOIDs": [
+      "48005-Precinct 18",
+      "48005-Precinct 34"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Angelo State University",
+    "GEOIDs": [
+      "48451-Precinct 228",
+      "48451-Precinct 402"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Austin College",
+    "GEOIDs": [
+      "48181-Precinct 102"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Austin Community College",
+    "GEOIDs": [
+      "48453-422",
+      "48453-423"
+    ]
+  },
+  {
+    "SCHOOL_NM": "BMA Theological College",
+    "GEOIDs": [
+      "48073-Precinct 43"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Baylor University",
+    "GEOIDs": [
+      "48309-Precinct 18",
+      "48309-Precinct 2",
+      "48309-Precinct 20",
+      "48309-Precinct 21",
+      "48309-Precinct 3"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Bee County College",
+    "GEOIDs": [
+      "48025-Precinct 18"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Blinn College",
+    "GEOIDs": [
+      "48477-Precinct 406"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Brazosport College",
+    "GEOIDs": [
+      "48039-Precinct 22",
+      "48039-Precinct 48"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Brookhaven Junior College",
+    "GEOIDs": [
+      "48113-2305-02",
+      "48113-2305-03"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Buffalo Stadium",
+    "GEOIDs": [
+      "48381-Precinct 123",
+      "48381-Precinct 309"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Butler College",
+    "GEOIDs": [
+      "48423-Precinct 36"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Cedar Valley College",
+    "GEOIDs": [
+      "48113-3075-01",
+      "48113-3075-02",
+      "48113-3802-02",
+      "48113-3809-01"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Central Texas College",
+    "GEOIDs": [
+      "48027-Precinct 401",
+      "48099-Precinct 311"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Clarendon College",
+    "GEOIDs": [
+      "48129-Precinct 101"
+    ]
+  },
+  {
+    "SCHOOL_NM": "College of the Mainland",
+    "GEOIDs": [
+      "48167-Precinct 436",
+      "48167-Precinct 438"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Concordia University",
+    "GEOIDs": [
+      "48491-Precinct 146",
+      "48491-Precinct 151"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Corpus Christi Minor Seminary",
+    "GEOIDs": [
+      "48355-Precinct 20"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Dallas Baptist College",
+    "GEOIDs": [
+      "48113-4052-01",
+      "48113-4112-01"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Dallas Bible College",
+    "GEOIDs": [
+      "48113-1308-01"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Del Mar College",
+    "GEOIDs": [
+      "48355-Precinct 57"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Del Mar College - West Campus",
+    "GEOIDs": [
+      "48355-Precinct 24",
+      "48355-Precinct 60"
+    ]
+  },
+  {
+    "SCHOOL_NM": "EL Paso Community College ",
+    "GEOIDs": [
+      "48141-037",
+      "48141-042",
+      "48141-080"
+    ]
+  },
+  {
+    "SCHOOL_NM": "East Texas Baptist University",
+    "GEOIDs": [
+      "48203-Precinct 2"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Eastfield College",
+    "GEOIDs": [
+      "48113-1305-01"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Grayson County College",
+    "GEOIDs": [
+      "48181-Precinct 408"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Grayson County College - West Campus",
+    "GEOIDs": [
+      "48181-Precinct 404",
+      "48181-Precinct 408",
+      "48181-Precinct 410",
+      "48181-Precinct 411"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Hardin-Simmons University",
+    "GEOIDs": [
+      "48441-Precinct 203"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Houston Baptist University",
+    "GEOIDs": [
+      "48201-0256",
+      "48201-0284"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Howard County Junior College",
+    "GEOIDs": [
+      "48227-Precinct 26",
+      "48227-Precinct 45"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Howard Payne University",
+    "GEOIDs": [
+      "48049-Precinct 204"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Huston Tillotson College",
+    "GEOIDs": [
+      "48453-100",
+      "48453-101",
+      "48453-401",
+      "48453-402"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Intentional Bible College",
+    "GEOIDs": [
+      "48029-2040"
+    ]
+  },
+  {
+    "SCHOOL_NM": "J.J. Pickle Research Center - The University of Texas at Austin",
+    "GEOIDs": [
+      "48453-241"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Jacksonville College",
+    "GEOIDs": [
+      "48073-Precinct 38",
+      "48073-Precinct 43"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Kilgore College",
+    "GEOIDs": [
+      "48183-Precinct 15",
+      "48183-Precinct 16"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Lamar University",
+    "GEOIDs": [
+      "48245-Precinct 20",
+      "48245-Precinct 67",
+      "48245-Precinct 75"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Lamar and Planetary Institute - Rice University",
+    "GEOIDs": [
+      "48201-0391",
+      "48201-0415"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Laredo Community College",
+    "GEOIDs": [
+      "48479-Precinct 401"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Le Tourneau University",
+    "GEOIDs": [
+      "48183-Precinct 19"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Lee College",
+    "GEOIDs": [
+      "48201-0099",
+      "48201-0248"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Lon Morris College",
+    "GEOIDs": [
+      "48073-Precinct 15"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Lubbock Christian College",
+    "GEOIDs": [
+      "48303-Precinct 53",
+      "48303-Precinct 7"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Mary Allen College",
+    "GEOIDs": [
+      "48225-Precinct 1"
+    ]
+  },
+  {
+    "SCHOOL_NM": "McMurry University",
+    "GEOIDs": [
+      "48441-Precinct 301",
+      "48441-Precinct 405"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Midland College",
+    "GEOIDs": [
+      "48329-Precinct 206",
+      "48329-Precinct 210"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Midwestern State University",
+    "GEOIDs": [
+      "48485-Precinct 102",
+      "48485-Precinct 104",
+      "48485-Precinct 109"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Navarro College",
+    "GEOIDs": [
+      "48349-Precinct 300",
+      "48349-Precinct 402"
+    ]
+  },
+  {
+    "SCHOOL_NM": "North Central Texas Junior College",
+    "GEOIDs": [
+      "48097-Precinct 1C"
+    ]
+  },
+  {
+    "SCHOOL_NM": "North Harris County College",
+    "GEOIDs": [
+      "48201-0657"
+    ]
+  },
+  {
+    "SCHOOL_NM": "North Lake College",
+    "GEOIDs": [
+      "48113-4633-01",
+      "48113-4634-01",
+      "48113-4634-02"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Odessa College",
+    "GEOIDs": [
+      "48135-Precinct 303",
+      "48135-Precinct 306"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Our Lady of the Lake University",
+    "GEOIDs": [
+      "48029-2008",
+      "48029-2011",
+      "48029-2012",
+      "48029-2089",
+      "48029-2103"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Palo Alto Community College",
+    "GEOIDs": [
+      "48029-1044"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Panola Junior College",
+    "GEOIDs": [
+      "48365-Precinct 1",
+      "48365-Precinct 2",
+      "48365-Precinct 27"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Paris Junior College",
+    "GEOIDs": [
+      "48277-Precinct 1A3B",
+      "48277-Precinct 1A5A",
+      "48277-Precinct 3C7G"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Paul Quinn College",
+    "GEOIDs": [
+      "48113-3062-01",
+      "48113-3071-01"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Prairie View A&M University",
+    "GEOIDs": [
+      "48473-Precinct 208",
+      "48473-Precinct 311",
+      "48473-Precinct 312"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Price Memorial College",
+    "GEOIDs": [
+      "48375-Precinct 221",
+      "48375-Precinct 426"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Rice University",
+    "GEOIDs": [
+      "48201-0148",
+      "48201-0361",
+      "48201-0540"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Richland College",
+    "GEOIDs": [
+      "48113-2120-01",
+      "48113-2123-02",
+      "48113-2126-01"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Saint Anthony Seminary",
+    "GEOIDs": [
+      "48029-2055"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Saint Edward's University",
+    "GEOIDs": [
+      "48453-417",
+      "48453-418"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Saint Joseph Academy",
+    "GEOIDs": [
+      "48061-Precinct 38"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Saint Philip's College",
+    "GEOIDs": [
+      "48029-4012"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Saint Stephens School",
+    "GEOIDs": [
+      "48453-291",
+      "48453-323"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Sam Houston State University",
+    "GEOIDs": [
+      "48471-Precinct 102",
+      "48471-Precinct 301",
+      "48471-Precinct 401"
+    ]
+  },
+  {
+    "SCHOOL_NM": "San Antonio College",
+    "GEOIDs": [
+      "48029-4015",
+      "48029-4017"
+    ]
+  },
+  {
+    "SCHOOL_NM": "San Jacinto College",
+    "GEOIDs": [
+      "48201-0352"
+    ]
+  },
+  {
+    "SCHOOL_NM": "San Jacinto College - North",
+    "GEOIDs": [
+      "48201-0353"
+    ]
+  },
+  {
+    "SCHOOL_NM": "San Jacinto College - South",
+    "GEOIDs": [
+      "48201-0475"
+    ]
+  },
+  {
+    "SCHOOL_NM": "San Marcos Baptist Academy",
+    "GEOIDs": [
+      "48209-Precinct 336"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Schreiner College",
+    "GEOIDs": [
+      "48265-Precinct 211",
+      "48265-Precinct 314"
+    ]
+  },
+  {
+    "SCHOOL_NM": "South Plains College",
+    "GEOIDs": [
+      "48219-Precinct 11",
+      "48219-Precinct 16",
+      "48219-Precinct 32"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Southern Bible College",
+    "GEOIDs": [
+      "48201-0374",
+      "48201-0818"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Southern Methodist University",
+    "GEOIDs": [
+      "48113-2038-01",
+      "48113-2202-01",
+      "48113-2223-01",
+      "48113-2224-01"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Southwest Christian College",
+    "GEOIDs": [
+      "48257-Precinct 26"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Southwest Collegiate Institute For The Deaf",
+    "GEOIDs": [
+      "48227-Precinct 13"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Southwest Texas Junior College/Sul Ross State University/Rio Grande College - Uvalde Campus",
+    "GEOIDs": [
+      "48463-Precinct 5"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Southwestern Adventist University",
+    "GEOIDs": [
+      "48251-Precinct 22"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Southwestern Assemblies of God University",
+    "GEOIDs": [
+      "48139-Precinct 1026"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Southwestern Baptist Theological Seminary",
+    "GEOIDs": [
+      "48439-1085",
+      "48439-4155"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Southwestern University",
+    "GEOIDs": [
+      "48491-Precinct 314",
+      "48491-Precinct 368"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Stephen F. Austin State University",
+    "GEOIDs": [
+      "48347-Precinct 24",
+      "48347-Precinct 32",
+      "48347-Precinct 33",
+      "48347-Precinct 34"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Sul Ross State University",
+    "GEOIDs": [
+      "48043-Precinct 1",
+      "48043-Precinct 2",
+      "48043-Precinct 8"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Sul Ross State University - Rio Grande College",
+    "GEOIDs": [
+      "48323-Precinct 1C",
+      "48323-Precinct 2E"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Tarleton State University",
+    "GEOIDs": [
+      "48143-Precinct 33",
+      "48143-Precinct 35",
+      "48143-Precinct 45"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Tarrant County Junior College - Northeast Campus",
+    "GEOIDs": [
+      "48439-3196"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Tarrant County Junior College - Northwest Campus",
+    "GEOIDs": [
+      "48439-4650"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Tarrant County Junior College - South Campus",
+    "GEOIDs": [
+      "48439-1291"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Temple College",
+    "GEOIDs": [
+      "48027-Precinct 306"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas A&M International University",
+    "GEOIDs": [
+      "48323-Precinct 1A",
+      "48323-Precinct 1B",
+      "48323-Precinct 4B",
+      "48479-Precinct 255",
+      "48479-Precinct 272"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas A&M University",
+    "GEOIDs": [
+      "48041-Precinct 11",
+      "48041-Precinct 2",
+      "48041-Precinct 20",
+      "48041-Precinct 21",
+      "48041-Precinct 29",
+      "48041-Precinct 33",
+      "48041-Precinct 35",
+      "48041-Precinct 36",
+      "48041-Precinct 49",
+      "48041-Precinct 70",
+      "48041-Precinct 72",
+      "48041-Precinct 74",
+      "48041-Precinct 75",
+      "48041-Precinct 9"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas A&M University - Central Texas",
+    "GEOIDs": [
+      "48027-Precinct 401",
+      "48027-Precinct 405"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas A&M University - Commerce",
+    "GEOIDs": [
+      "48231-Precinct 427",
+      "48231-Precinct 428"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas A&M University - Corpus Christi",
+    "GEOIDs": [
+      "48355-Precinct 19",
+      "48355-Precinct 65",
+      "48355-Precinct 91"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas A&M University - Kingsville",
+    "GEOIDs": [
+      "48273-Precinct 22",
+      "48273-Precinct 24",
+      "48273-Precinct 41"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas A&M University - Kingsville System Center - San Antonio",
+    "GEOIDs": [
+      "48029-1044"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas A&M University - Riverside Campus",
+    "GEOIDs": [
+      "48041-Precinct 101",
+      "48041-Precinct 23",
+      "48041-Precinct 70",
+      "48041-Precinct 89A"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas A&M University - Texarkana Campus",
+    "GEOIDs": [
+      "48037-Precinct 2C",
+      "48037-Precinct 4C"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas A&M University at Galveston",
+    "GEOIDs": [
+      "48167-Precinct 211"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas Chiropractic College",
+    "GEOIDs": [
+      "48201-0696",
+      "48201-1062"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas Christian University",
+    "GEOIDs": [
+      "48439-1081",
+      "48439-1298",
+      "48439-4182",
+      "48439-4498"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas College",
+    "GEOIDs": [
+      "48423-Precinct 13",
+      "48423-Precinct 18"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas Lutheran University",
+    "GEOIDs": [
+      "48187-Precinct 112",
+      "48187-Precinct 123",
+      "48187-Precinct 209",
+      "48187-Precinct 220"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas Medical Center",
+    "GEOIDs": [
+      "48201-0148",
+      "48201-0361",
+      "48201-0472",
+      "48201-0540",
+      "48201-0830",
+      "48201-0837"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas Southern University",
+    "GEOIDs": [
+      "48201-0085",
+      "48201-0247",
+      "48201-0390"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas State Baptist Seminary",
+    "GEOIDs": [
+      "48401-Precinct 201"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas State Technical Institute",
+    "GEOIDs": [
+      "48375-Precinct 327"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas State University - San Marcos",
+    "GEOIDs": [
+      "48209-Precinct 112",
+      "48209-Precinct 132",
+      "48209-Precinct 140",
+      "48209-Precinct 141",
+      "48209-Precinct 142",
+      "48209-Precinct 332"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas Tech University",
+    "GEOIDs": [
+      "48303-Precinct 1",
+      "48303-Precinct 114",
+      "48303-Precinct 152",
+      "48303-Precinct 3",
+      "48303-Precinct 49",
+      "48303-Precinct 50",
+      "48303-Precinct 9"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas Tech University Health Sciences Center at Amarillo",
+    "GEOIDs": [
+      "48375-Precinct 122",
+      "48375-Precinct 324"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas Tech University Health Sciences Center at El Paso",
+    "GEOIDs": [
+      "48141-079"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas Tech University Health Sciences Center at Lubbock",
+    "GEOIDs": [
+      "48303-Precinct 152",
+      "48303-Precinct 50",
+      "48303-Precinct 9"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas Tech University Health Sciences Center at Odessa",
+    "GEOIDs": [
+      "48135-Precinct 305",
+      "48135-Precinct 412"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas Wesleyan University",
+    "GEOIDs": [
+      "48439-1011"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Texas Woman's University",
+    "GEOIDs": [
+      "48121-4167"
+    ]
+  },
+  {
+    "SCHOOL_NM": "The University of Texas - Pan American",
+    "GEOIDs": [
+      "48215-109"
+    ]
+  },
+  {
+    "SCHOOL_NM": "The University of Texas Cancer Research Center",
+    "GEOIDs": [
+      "48021-Precinct 1006",
+      "48021-Precinct 4023"
+    ]
+  },
+  {
+    "SCHOOL_NM": "The University of Texas Health Science Center at Houston",
+    "GEOIDs": [
+      "48201-0540",
+      "48201-0830"
+    ]
+  },
+  {
+    "SCHOOL_NM": "The University of Texas Health Science Center at San Antonio",
+    "GEOIDs": [
+      "48029-2156"
+    ]
+  },
+  {
+    "SCHOOL_NM": "The University of Texas Health Science Center at Tyler",
+    "GEOIDs": [
+      "48423-Precinct 7"
+    ]
+  },
+  {
+    "SCHOOL_NM": "The University of Texas M.D. Anderson Cancer Center",
+    "GEOIDs": [
+      "48201-0540"
+    ]
+  },
+  {
+    "SCHOOL_NM": "The University of Texas Marine Science Institute",
+    "GEOIDs": [
+      "48355-Precinct 19"
+    ]
+  },
+  {
+    "SCHOOL_NM": "The University of Texas Medical Branch ",
+    "GEOIDs": [
+      "48167-Precinct 206",
+      "48167-Precinct 211"
+    ]
+  },
+  {
+    "SCHOOL_NM": "The University of Texas Southwestern Medical Center",
+    "GEOIDs": [
+      "48113-4019-01",
+      "48113-4019-02"
+    ]
+  },
+  {
+    "SCHOOL_NM": "The University of Texas at Arlington",
+    "GEOIDs": [
+      "48439-2052",
+      "48439-2058",
+      "48439-2147",
+      "48439-2161",
+      "48439-2181",
+      "48439-2744"
+    ]
+  },
+  {
+    "SCHOOL_NM": "The University of Texas at Austin",
+    "GEOIDs": [
+      "48453-100",
+      "48453-103",
+      "48453-200",
+      "48453-203",
+      "48453-204",
+      "48453-213",
+      "48453-230",
+      "48453-300",
+      "48453-312",
+      "48453-313",
+      "48453-315",
+      "48453-321",
+      "48453-322"
+    ]
+  },
+  {
+    "SCHOOL_NM": "The University of Texas at Brownsville",
+    "GEOIDs": [
+      "48061-Precinct 6"
+    ]
+  },
+  {
+    "SCHOOL_NM": "The University of Texas at Dallas",
+    "GEOIDs": [
+      "48085-55",
+      "48113-2500-01",
+      "48113-2501-01",
+      "48113-2504-01",
+      "48113-2523-01",
+      "48113-2523-02"
+    ]
+  },
+  {
+    "SCHOOL_NM": "The University of Texas at El Paso",
+    "GEOIDs": [
+      "48141-034",
+      "48141-035",
+      "48141-036"
+    ]
+  },
+  {
+    "SCHOOL_NM": "The University of Texas at San Antonio",
+    "GEOIDs": [
+      "48029-3134",
+      "48029-3149"
+    ]
+  },
+  {
+    "SCHOOL_NM": "The University of Texas at Tyler",
+    "GEOIDs": [
+      "48423-Precinct 27",
+      "48423-Precinct 56"
+    ]
+  },
+  {
+    "SCHOOL_NM": "The University of Texas of the Permain Basin",
+    "GEOIDs": [
+      "48135-Precinct 203",
+      "48135-Precinct 206"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Trinity University",
+    "GEOIDs": [
+      "48029-2055",
+      "48029-2094"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Trinity Valley Community College",
+    "GEOIDs": [
+      "48213-Precinct 4B"
+    ]
+  },
+  {
+    "SCHOOL_NM": "University of Dallas",
+    "GEOIDs": [
+      "48113-4664-01",
+      "48113-4664-03"
+    ]
+  },
+  {
+    "SCHOOL_NM": "University of Houston",
+    "GEOIDs": [
+      "48201-0389",
+      "48201-0390"
+    ]
+  },
+  {
+    "SCHOOL_NM": "University of Houston - Clear Lake",
+    "GEOIDs": [
+      "48201-0092",
+      "48201-0174",
+      "48201-0306",
+      "48201-0391",
+      "48201-0745",
+      "48201-0746"
+    ]
+  },
+  {
+    "SCHOOL_NM": "University of Houston - Downtown",
+    "GEOIDs": [
+      "48201-0369",
+      "48201-0890"
+    ]
+  },
+  {
+    "SCHOOL_NM": "University of Houston - Victoria and The Victoria College",
+    "GEOIDs": [
+      "48469-Precinct 32",
+      "48469-Precinct 5"
+    ]
+  },
+  {
+    "SCHOOL_NM": "University of Houston Research Center",
+    "GEOIDs": [
+      "48167-Precinct 226",
+      "48167-Precinct 419"
+    ]
+  },
+  {
+    "SCHOOL_NM": "University of North Texas",
+    "GEOIDs": [
+      "48121-4170",
+      "48121-4187"
+    ]
+  },
+  {
+    "SCHOOL_NM": "University of North Texas Health Science Center",
+    "GEOIDs": [
+      "48439-4116"
+    ]
+  },
+  {
+    "SCHOOL_NM": "University of North Texas at Dallas",
+    "GEOIDs": [
+      "48113-3068-01"
+    ]
+  },
+  {
+    "SCHOOL_NM": "University of Saint Thomas",
+    "GEOIDs": [
+      "48201-0034",
+      "48201-0039",
+      "48201-0123"
+    ]
+  },
+  {
+    "SCHOOL_NM": "University of Texas - Pan American",
+    "GEOIDs": [
+      "48215-013",
+      "48215-107",
+      "48215-109"
+    ]
+  },
+  {
+    "SCHOOL_NM": "University of the Incarnate Word",
+    "GEOIDs": [
+      "48029-3020",
+      "48029-3141",
+      "48029-4008"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Villa Maria Academy",
+    "GEOIDs": [
+      "48061-Precinct 13",
+      "48061-Precinct 38"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Wayland Baptist College",
+    "GEOIDs": [
+      "48189-Precinct 105",
+      "48189-Precinct 307"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Weatherford College",
+    "GEOIDs": [
+      "48367-Precinct 310"
+    ]
+  },
+  {
+    "SCHOOL_NM": "West Texas A&M University",
+    "GEOIDs": [
+      "48381-Precinct 103",
+      "48381-Precinct 123",
+      "48381-Precinct 302"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Western Texas College",
+    "GEOIDs": [
+      "48415-Precinct 10",
+      "48415-Precinct 12"
+    ]
+  },
+  {
+    "SCHOOL_NM": "Wiley College",
+    "GEOIDs": [
+      "48203-Precinct 3"
+    ]
+  }
+]

@@ -4,116 +4,82 @@
 <meta charset="utf-8">
 <title>Texas 2024 Results with Demographics</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-<link href="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.css" rel="stylesheet">
+<link href="./styles.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.js"></script>
-<style>
-body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
-#map { position: absolute; top: 0; bottom: 0; width: 100%; }
-
-/* Summary box */
-#summaryBox {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 12px 14px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  font-size: 14px;
-  line-height: 1.4;
-  z-index: 1;
-  max-width: 300px;
-}
-#summaryBox .title { font-weight: 600; margin-bottom: 8px; color: #333; }
-#summaryBox .row { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
-
-/* Mode toggle and sliders */
-#controlBox {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: rgba(255,255,255,0.96);
-  padding: 12px 16px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  font-size: 13px;
-  line-height: 1.4;
-  z-index: 2;
-  min-width: 350px;
-}
-
-#modeToggle {
-  margin-bottom: 8px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #eee;
-}
-
-#modeToggle label {
-  margin-right: 16px;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-#sliderBox {
-  /* Container for demographic sliders */
-}
-
-/* Fixed hover info box */
-#hoverBox {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 12px 14px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  font-size: 13px;
-  line-height: 1.4;
-  z-index: 1;
-  min-width: 220px;
-  max-width: 280px;
-  display: none; /* Hidden by default */
-}
-#hoverBox .precinct-title { 
-  font-weight: 600; 
-  margin-bottom: 6px; 
-  color: #333; 
-  border-bottom: 1px solid #eee;
-  padding-bottom: 4px;
-}
-#hoverBox .info-row { 
-  margin-bottom: 3px; 
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
-}
-
-/* Zoom indicator box */
-#zoomBox {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 8px 12px;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  font-size: 12px;
-  font-weight: 500;
-  z-index: 1;
-  color: #333;
-}
-
-</style>
 </head>
 <body>
 <div id="map"></div>
-<div id="summaryBox">
-  <div class="title">Loading...</div>
+<div id="leftColumn">
+  <div id="summaryBox">
+    <div class="collapsible-header" id="summaryHeader">
+      <span>Statewide totals</span>
+      <button id="summaryToggle" class="collapse-btn" aria-label="Toggle statewide totals">−</button>
+    </div>
+    <div id="summaryContent">
+      <div class="title">Loading...</div>
+    </div>
+  </div>
+  <div id="hoverBox">
+    <div class="collapsible-header" id="hoverHeader">
+      <span>Hover info</span>
+      <button id="hoverToggle" class="collapse-btn" aria-label="Toggle hover info">−</button>
+    </div>
+    <div id="hoverContent">
+      <div class="precinct-title">Hover over a precinct</div>
+    </div>
+  </div>
 </div>
-<div id="controlBox">
-  <div id="modeToggle" style="display:none;"></div>
-  <div id="filterBox" style="margin-top:10px; border-top:1px solid #eee; padding-top:8px;">
-    <div style="font-weight:600; margin-bottom:6px;">Filter precincts by demographics (press Enter to apply)</div>
+<!-- Color mode box (top-right) -->
+<div id="colorModeBox" class="rightBox" style="top:12px;">
+  <div style="font-weight:600;">Color mode:
+    <label style="margin-left:8px; margin-right:8px;"><input type="radio" name="colormode" value="margin" checked> Dem Margin</label>
+    <label><input type="radio" name="colormode" value="shift"> Shift (20→24)</label>
+  </div>
+</div>
+
+<!-- 3D mode box (below filters) -->
+<div id="threeDBox" class="rightBox" style="top: calc(58px + 34vh + 2px + 120px); width: 240px;">
+    <div class="collapsible-header" id="threeDHeader">
+      <span>3D mode</span>
+      <button id="threeDToggle" class="collapse-btn" aria-label="Toggle 3-D mode">−</button>
+    </div>
+    <div id="threeDContent" style="display:block;">
+      <div style="font-weight:600; margin-bottom:6px;">Metric</div>
+      <div id="threeDMetrics">
+        <label style="display:block; margin-bottom:4px;"><input type="radio" name="metric3d" value="hisp_pct"> Hispanic%</label>
+        <label style="display:block; margin-bottom:4px;"><input type="radio" name="metric3d" value="asian_pct"> Asian%</label>
+        <label style="display:block; margin-bottom:4px;"><input type="radio" name="metric3d" value="black_pct"> Black%</label>
+        <label style="display:block; margin-bottom:4px;"><input type="radio" name="metric3d" value="white_pct"> White%</label>
+        <label style="display:block; margin-bottom:4px;"><input type="radio" name="metric3d" value="college_student_pct"> College Student%</label>
+        <label style="display:block; margin-bottom:4px;"><input type="radio" name="metric3d" value="college_educated_pct"> College Educated%</label>
+        <label style="display:block; margin-bottom:4px;"><input type="radio" name="metric3d" value="shift_20_24"> margin shift (20 → 24)</label>
+        <label style="display:block; margin-bottom:4px;"><input type="radio" name="metric3d" value="dem_margin_pct" checked> Dem Margin%</label>
+        <label style="display:block; margin-bottom:4px;"><input type="radio" name="metric3d" value="avg_hh_income"> Avg Household Income</label>
+      </div>
+      <div style="margin-top:8px; display:grid; grid-template-columns:auto 80px auto 80px; gap:8px; align-items:center;">
+        <div>Max height (m)</div><input id="threeDMaxHeight" type="number" step="100" value="50000" style="width:72px;"/>
+      </div>
+      <div style="margin-top:6px; display:grid; grid-template-columns:auto 80px; gap:8px; align-items:center;">
+        <div>Min height (m)</div><input id="threeDMinHeight" type="number" step="10" value="0" style="width:72px;"/>
+      </div>
+      <div style="margin-top:6px; display:grid; grid-template-columns:auto 80px; gap:8px; align-items:center;">
+        <div>Contrast (γ)</div><input id="threeDContrast" type="number" step="0.1" min="0.1" value="1.75" style="width:72px;"/>
+      </div>
+      <div style="margin-top:8px; display:flex; gap:8px;">
+        <button id="threeDApply">Apply</button>
+        <button id="threeDClear">Clear</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Filters box (top-right) -->
+<div id="filterBox" class="rightBox" style="top:58px; width: 360px;">
+    <div class="collapsible-header" id="filterHeader">
+      <span>Demographics Filter</span>
+      <button id="filterToggle" class="collapse-btn" aria-label="Toggle filters">−</button>
+    </div>
+    <div id="filterContent" style="display:block;">
     <div style="display:grid; grid-template-columns:auto 48px 24px 80px; gap:6px; align-items:center;">
       <div>Hispanic%</div>
       <select id="f-hisp-op"><option value=">" selected>&gt;</option><option value="<">&lt;</option></select>
@@ -159,15 +125,18 @@ body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, Se
       <select id="f-avg_hh_income-op"><option value=">" selected>&gt;</option><option value="<">&lt;</option></select>
       <div></div>
       <input id="f-avg_hh_income-val" type="number" step="1000" placeholder="$"/>
+
+      <div>Total votes</div>
+      <select id="f-total-op"><option value=">" selected>&gt;</option><option value="<">&lt;</option></select>
+      <div></div>
+      <input id="f-total-val" type="number" min="0" step="1" placeholder="#"/>
     </div>
     <div style="margin-top:6px; display:flex; gap:8px;">
       <button id="applyFilters">Apply</button>
       <button id="clearFilters">Clear</button>
     </div>
+    </div>
   </div>
-</div>
-<div id="hoverBox">
-  <div class="precinct-title">Hover over a precinct</div>
 </div>
 <div id="zoomBox">
   Zoom: 5.5

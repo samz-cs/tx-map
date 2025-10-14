@@ -42,14 +42,35 @@ export function bindPrecinctHover() {
       <div class="info-row"><span>Rep votes:</span><span>${votesRepStr}</span></div>
       <div class="info-row"><span>Total votes:</span><span>${totalStr}</span></div>
     `;
-    popup.setLngLat(e.lngLat).setHTML(html).addTo(map);
-    try { map.setFilter('hover-outline', ['==', ['get', 'GEOID'], geoid]); } catch {}
+    // Write into fixed hover box
+    const fixed = document.getElementById('hoverContent');
+    if (fixed) fixed.innerHTML = html;
+    // still maintain outline and hovered state
+    try {
+      const extrudeExists = !!map.getLayer('extrusion_layer');
+      const extrudeVisible = extrudeExists && map.getLayoutProperty('extrusion_layer', 'visibility') !== 'none';
+      if (!extrudeVisible) map.setFilter('hover-outline', ['==', ['get', 'GEOID'], geoid]);
+      else map.setFilter('hover-outline', ['==', ['get', 'GEOID'], '']);
+    } catch {}
+    try {
+      if (appState.hoveredGeoid && appState.hoveredGeoid !== geoid) {
+        map.setFeatureState({ source: 'route', sourceLayer: 'TX_24_with_counties', id: appState.hoveredGeoid }, { hovered: false });
+      }
+      map.setFeatureState({ source: 'route', sourceLayer: 'TX_24_with_counties', id: geoid }, { hovered: true });
+      appState.hoveredGeoid = geoid;
+    } catch {}
     // Ensure county outline is hidden in precinct mode
     try { map.setFilter('county-hover-outline', ['==', ['get', 'GEOID'], '']); } catch {}
   });
   map.on('mouseleave', 'results_layer', () => {
-    try { appState.popup.remove(); } catch {}
+    // keep fixed box content; only clear outline
     try { map.setFilter('hover-outline', ['==', ['get', 'GEOID'], '']); } catch {}
+    try {
+      if (appState.hoveredGeoid) {
+        map.setFeatureState({ source: 'route', sourceLayer: 'TX_24_with_counties', id: appState.hoveredGeoid }, { hovered: false });
+        appState.hoveredGeoid = null;
+      }
+    } catch {}
   });
 
   // Global mousemove to clear precinct outline when not over a precinct
@@ -58,7 +79,11 @@ export function bindPrecinctHover() {
       let feats = [];
       try { feats = map.queryRenderedFeatures(e.point, { layers: ['results_layer'] }) || []; } catch {}
       if (!feats || feats.length === 0) {
-        try { map.setFilter('hover-outline', ['==', ['get', 'GEOID'], '']); } catch {}
+        try {
+          const extrudeExists = !!map.getLayer('extrusion_layer');
+          const extrudeVisible = extrudeExists && map.getLayoutProperty('extrusion_layer', 'visibility') !== 'none';
+          if (!extrudeVisible) map.setFilter('hover-outline', ['==', ['get', 'GEOID'], '']);
+        } catch {}
       }
     }
   });
@@ -117,7 +142,8 @@ export function bindCountyHover() {
       <div class="info-row"><span>Rep votes:</span><span>${formatNumber(Math.round(agg.rep))}</span></div>
       <div class="info-row"><span>Total votes:</span><span>${formatNumber(Math.round(agg.total))}</span></div>
     `;
-    popup.setLngLat(lngLat).setHTML(html).addTo(map);
+    const fixed = document.getElementById('hoverContent');
+    if (fixed) fixed.innerHTML = html;
   };
 
   map.on('mousemove', 'counties-fill', (e) => {
@@ -130,8 +156,8 @@ export function bindCountyHover() {
     if (map.getZoom() > 8) return;
     showCounty(e.features[0], e.lngLat);
   });
-  map.on('mouseleave', 'counties-fill', () => { try { popup.remove(); } catch {}; try { map.setFilter('county-hover-outline', ['==', ['get', 'GEOID'], '']); } catch {} });
-  map.on('mouseleave', 'county-hover-outline', () => { try { popup.remove(); } catch {}; try { map.setFilter('county-hover-outline', ['==', ['get', 'GEOID'], '']); } catch {} });
+  map.on('mouseleave', 'counties-fill', () => { try { map.setFilter('county-hover-outline', ['==', ['get', 'GEOID'], '']); } catch {} });
+  map.on('mouseleave', 'county-hover-outline', () => { try { map.setFilter('county-hover-outline', ['==', ['get', 'GEOID'], '']); } catch {} });
 
   // Global mousemove to clear county outline when not over a county
   map.on('mousemove', (e) => {

@@ -3,6 +3,7 @@ export const appState = {
   popup: null,
   renderMode: '2024',
   currentFilter: null,
+  hoveredGeoid: null,
 };
 
 

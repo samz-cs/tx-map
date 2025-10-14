@@ -18,7 +18,7 @@ export function renderTotals() {
   const demPct = totalVotes > 0 ? (totalDem / totalVotes) * 100 : 0;
   const repPct = totalVotes > 0 ? (totalRep / totalVotes) * 100 : 0;
 
-  const el = document.getElementById('summaryBox');
+  const el = document.getElementById('summaryContent');
   if (!el) return;
   el.innerHTML = `
     <div class="title">Statewide totals (2024)</div>

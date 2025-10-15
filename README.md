@@ -69,7 +69,7 @@ Each cell shows the 2020 to 2024 shift for all precincts that match the row (inc
 County-level analysis was chosen for this plot because turnout in precincts varies a lot depending on its location within the community. Certain areas may not have a lot of residents, but could have a polling place that is easily accessible by people who do not live in the precinct. For example, the precinct below had a polling location in a middle school. The VAP turnout was more than 200%.
 ![alt text](https://github.com/samz-cs/tx-map/blob/main/DS_example.png?raw=true)
 
-### Demorcatic Support held the strongest in highly educated precincts
+### Democratic Support held the strongest in highly educated precincts
 ![alt text](https://github.com/samz-cs/tx-map/blob/main/binned_shift_edu.png?raw=true)
 
 

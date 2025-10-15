@@ -5,10 +5,23 @@
 <title>Texas 2024 Results with Demographics</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 <link href="./styles.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
+<script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
 <script src="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.js"></script>
 </head>
 <body>
 <div id="map"></div>
+<!-- Welcome modal -->
+<div id="welcomeModal">
+  <div class="welcome-card">
+    <h3>Welcome</h3>
+    <p>Would you like a quick tour of the map features?</p>
+    <div class="welcome-actions">
+      <button id="welcomeSkip" class="btn secondary">Skip</button>
+      <button id="welcomeGuide" class="btn primary">Guide</button>
+    </div>
+  </div>
+ </div>
 <div id="leftColumn">
   <div id="summaryBox">
     <div class="collapsible-header" id="summaryHeader">
@@ -149,6 +162,10 @@
   initMap(window.mapboxgl);
   console.log("initmap called")
 </script>
+<script src="./guide.js"></script>
+
+<!-- Floating Guide Button -->
+<button id="guideBtn" onclick="startGuide()">Guide</button>
 
 </body>
 </html>

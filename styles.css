@@ -1,3 +1,4 @@
+html, body { height: 100%; overflow: hidden; }
 body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
 #map { position: absolute; top: 0; bottom: 0; width: 100%; }
 
@@ -129,5 +130,69 @@ body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, Se
   z-index: 1;
   color: #333;
 }
+
+/* Guide button */
+#guideBtn {
+  position: absolute;
+  left: 12px;
+  bottom: 56px; /* place above #zoomBox (which sits at bottom:12px) */
+  z-index: 3;
+  background: #2a6db0;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#guideBtn:hover { background: #245f98; }
+
+/* Allow interacting with the map while intro overlay is shown */
+.introjs-overlay { pointer-events: none !important; }
+.introjs-tooltip { pointer-events: auto; }
+/* Ensure helper/highlight layers don't block clicks on targeted controls */
+.introjs-helperLayer { pointer-events: none !important; background: transparent !important; }
+.introjs-tooltipReferenceLayer { pointer-events: none !important; }
+.introjs-disableInteraction { pointer-events: none !important; }
+/* Green outline for highlighted element during guide */
+.introjs-helperLayer {
+  border: 6px solid #25DB9E !important; /* dark green */
+  box-shadow: none !important;
+}
+/* Enlarge guide tooltip */
+.introjs-tooltip {
+  max-width: 520px !important;
+  width: 420px;
+  padding: 14px 16px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.introjs-tooltiptext { font-size: 14px; }
+
+/* Welcome modal */
+#welcomeModal {
+  position: fixed;
+  inset: 0;
+  display: none; /* shown on load via JS */
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.35);
+  z-index: 5;
+}
+.welcome-card {
+  background: #fff;
+  padding: 16px 18px;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+  max-width: 360px;
+  width: calc(100% - 48px);
+  color: #333;
+}
+.welcome-card h3 { margin: 0 0 8px 0; font-size: 18px; }
+.welcome-card p { margin: 0 0 12px 0; font-size: 14px; line-height: 1.4; }
+.welcome-actions { display: flex; gap: 8px; justify-content: flex-end; }
+.btn { border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; font-weight: 600; }
+.btn.secondary { background: #e9eef3; color: #2a2a2a; }
+.btn.primary { background: #2a6db0; color: #fff; }
+.btn.primary:hover { background: #245f98; }
 
 

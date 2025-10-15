@@ -43,6 +43,6 @@ This app visualizes Texas 2024 precinct results with interactive hovers, county 
 - intro.js for guide UI
 
 ## Examples and Other Visualizations
-[alt text](https://github.com/samz-cs/tx-map/blob/main/hisp_shift.png?raw=true)
+![alt text](https://github.com/samz-cs/tx-map/blob/main/hisp_shift.png?raw=true)
 
 

@@ -29,7 +29,10 @@ This app visualizes Texas 2024 Presidential election precinct results with inter
 ## Examples and Other Visualizations
 The following graphs and plots were made directly from the map or with data from the map.
 ### Across the state, areas with high Hispanic concentrations shifted towards the GOP
-![alt text](https://github.com/samz-cs/tx-map/blob/main/hisp_shift.png?raw=true)
+<img
+src="https://github.com/samz-cs/tx-map/blob/main/hisp_shift.png?raw=true"
+width="80%"
+/>
 #### Settings for this map
 - Color mode: Shift 
 - 3D metric: Hispanic%
@@ -39,14 +42,19 @@ The following graphs and plots were made directly from the map or with data from
 Each block represents a voting precinct. The height shows the precinct’s Hispanic population percentage — taller columns indicate a higher share of Hispanic residents (100% Hispanic being the tallest). The color in the map shows how the precinct’s vote shifted from 2020 to 2024: Bluer precincts moved more Democratic, while redder precincts shifted more Republican.
 
 ### Generally, at similar Hispanic population levels, lower-income areas shifted further to the right than higher-income areas.
-![alt text](https://github.com/samz-cs/tx-map/blob/d37aeb9f4df708122c99f7678dd3c93b85a48509/acc_hisp_inc_2D_bin.png)
-
+<img
+src="https://github.com/samz-cs/tx-map/blob/d37aeb9f4df708122c99f7678dd3c93b85a48509/acc_hisp_inc_2D_bin.png"
+width="80%"
+/>
 Each cell shows the 2020 to 2024 shift for all precincts that match the row (income range) and column (hispanic VAP %) values. 
 - Moving up the grid: shifts are more Republican
 - Moving left to right on the grid: shifts are less pronounced
 
 ### Areas with high Black concentrations remain Democratic strongholds
-![alt text](https://github.com/samz-cs/tx-map/blob/main/black_margin_200k_5_100votes.png?raw=true)
+<img
+src="https://github.com/samz-cs/tx-map/blob/main/black_margin_200k_5_100votes.png?raw=true"
+width="80%"
+/>
 #### Settings for this map
 - Color mode: Dem Margin
 - Filters: > 100 votes
@@ -55,7 +63,11 @@ Each cell shows the 2020 to 2024 shift for all precincts that match the row (inc
 - Contrast: 5
 
 ### However, Democrats also lost many voters in those same areas
-![alt text](https://github.com/samz-cs/tx-map/blob/main/black_shift_200k_5_100votes.png?raw=true)
+
+<img
+src="https://github.com/samz-cs/tx-map/blob/main/black_shift_200k_5_100votes.png?raw=true"
+width="80%"
+/>
 #### Settings for this map
 - Color mode: Shift
 - Filters: > 100 votes
@@ -64,12 +76,20 @@ Each cell shows the 2020 to 2024 shift for all precincts that match the row (inc
 - Contrast: 5
 
 ### Counties with high College-Educated concentrations had higher turnout
-![alt text](https://github.com/samz-cs/tx-map/blob/main/WLS_edu_turnout.png?raw=true)
+<img
+src="https://github.com/samz-cs/tx-map/blob/main/WLS_edu_turnout.png?raw=true"
+width="80%"
+/>
+
 
 County-level analysis was chosen for this plot because turnout in precincts varies a lot depending on its location within the community. Certain areas may not have a lot of residents, but could have a polling place that is easily accessible by people who do not live in the precinct. For example, the precinct below had a polling location in a middle school. The VAP turnout was more than 200%.
-![alt text](https://github.com/samz-cs/tx-map/blob/main/DS_example.png?raw=true)
+<img
+src="https://github.com/samz-cs/tx-map/blob/main/DS_example.png?raw=true"
+width="80%"
+/>
 
 ### Democratic Support held the strongest in highly educated precincts
-![alt text](https://github.com/samz-cs/tx-map/blob/main/binned_shift_edu.png?raw=true)
-
-
+<img
+src="https://github.com/samz-cs/tx-map/blob/main/binned_shift_edu.png?raw=true"
+width="80%"
+/>

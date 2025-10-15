@@ -78,7 +78,8 @@ Each block represents a voting precinct. The height shows the precinct’s Hispa
 
 ### Counties with high College-Educated concentrations had higher turnout
 ![alt text](https://github.com/samz-cs/tx-map/blob/main/WLS_edu_turnout.png?raw=true)
-- County-level analysis was chosen because turnout in precincts varies a lot depending on the location within the community. Certain areas may not have a lot of residents, but could have a polling place that is easily accessible by people who do not live in the precinct. For example, the precinct below had a polling location in a middle school. The VAP turnout was more than 200%.
+
+County-level analysis was chosen because turnout in precincts varies a lot depending on the location within the community. Certain areas may not have a lot of residents, but could have a polling place that is easily accessible by people who do not live in the precinct. For example, the precinct below had a polling location in a middle school. The VAP turnout was more than 200%.
 ![alt text](https://github.com/samz-cs/tx-map/blob/main/DS_example.png?raw=true)
 
 

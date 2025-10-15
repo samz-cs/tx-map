@@ -82,8 +82,8 @@ src="https://github.com/samz-cs/tx-map/blob/main/WLS_edu_turnout.png?raw=true"
 width="80%"
 />
 
-
 County-level analysis was chosen for this plot because turnout in precincts varies a lot depending on its location within the community. Certain areas may not have a lot of residents, but could have a polling place that is easily accessible by people who do not live in the precinct. For example, the precinct below had a polling location in a middle school. The VAP turnout was more than 200%.
+
 <img
 src="https://github.com/samz-cs/tx-map/blob/main/DS_example.png?raw=true"
 width="80%"

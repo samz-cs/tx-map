@@ -12,7 +12,7 @@ export async function init(mapboxgl) {
     container: 'map',
     style: 'mapbox://styles/mapbox/dark-v11',
     center: [-99.341389, 31.330556],
-    zoom: 5.5,
+    zoom: 6.1,
     maxZoom: 16,
   });
   appState.map = map;

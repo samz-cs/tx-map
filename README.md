@@ -42,4 +42,7 @@ This app visualizes Texas 2024 precinct results with interactive hovers, county 
 - Various MapBox APIs for hosting Tilesets on their platform
 - intro.js for guide UI
 
+## Examples and Other Visualizations
+[alt text](https://github.com/samz-cs/tx-map/blob/main/hisp_shift.png?raw=true)
+
 

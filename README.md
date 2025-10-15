@@ -1,4 +1,4 @@
-# Texas Precinct Map – Usage Guide
+# Texas Precinct Explorer – About the Map and Its Data
 
 This app visualizes Texas 2024 Presidential election precinct results with interactive hovers, county rollups, 3D visualizations, and demographic filters. This was inspired by the [NYT's Extremely Detailed Map of the 2024 Election](https://www.nytimes.com/interactive/2025/us/elections/2024-election-map-precinct-results.html). I spent hours exploring it and I thought it would be cool to make my own version with more insights.
 

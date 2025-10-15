@@ -1,6 +1,6 @@
 # Texas Precinct Map – Usage Guide
 
-This app visualizes Texas 2024 precinct results with interactive hovers, county rollups, 3D visualizations, and demographic filters. This was inspired by the [NYT's Extremely Detailed Map of the 2024 Election](https://www.nytimes.com/interactive/2025/us/elections/2024-election-map-precinct-results.html). I spent hours exploring it and I thought it would be cool to make my own version with more insights.
+This app visualizes Texas 2024 Presidential election precinct results with interactive hovers, county rollups, 3D visualizations, and demographic filters. This was inspired by the [NYT's Extremely Detailed Map of the 2024 Election](https://www.nytimes.com/interactive/2025/us/elections/2024-election-map-precinct-results.html). I spent hours exploring it and I thought it would be cool to make my own version with more insights.
 
 ## What you see
 - Colored precincts (2024): color ramp based on Democratic margin from the CSV.
@@ -55,7 +55,7 @@ The following graphs and plots were made directly from the map or with data from
 
 Each block represents a voting precinct. The height shows the precinct’s Hispanic population percentage — taller columns indicate a higher share of Hispanic residents (100% Hispanic being the tallest). The color in the map shows how the precinct’s vote shifted from 2020 to 2024: Bluer precincts moved more Democratic, while redder precincts shifted more Republican.
 
-### Generally, Hispanic areas with lower household income shifted right more than Hispanic areas with higher houdehold income
+### Generally, at similar Hispanic population levels, lower-income areas shifted further to the right than higher-income areas.
 ![alt text](https://github.com/samz-cs/tx-map/blob/d37aeb9f4df708122c99f7678dd3c93b85a48509/acc_hisp_inc_2D_bin.png)
 
 Each cell shows the 2020 to 2024 shift for all precincts that match the row (income range) and column (hispanic VAP %) values. 

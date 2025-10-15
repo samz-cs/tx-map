@@ -10,7 +10,7 @@ This app visualizes Texas 2024 Presidential election precinct results with inter
   - Dem margin% (2024) = (Harris votes − Trump votes) / total votes 
   - College Student% = 4 year college enrollment / total VAP
   - College Educated% = educational attainment of bachelors and above / total VAP
-  - margin shift (20-24) = 2024 Dem margin of victory - 2020 Dem margin of victory
+  - margin shift (20-24) = 2024 Dem margin of victory (%) - 2020 Dem margin of victory (%)
   - Avg Household Income = aggregate income / # of households
       - Note: Median Household income is more representative because high earners skew averages, but I wasn't able to find median income information for precincts. The closest thing I found was Census block-group aggregate income, and distributed the aggregate into the precincts using Census blocks as the geographic intermediary. 
 

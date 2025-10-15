@@ -43,6 +43,14 @@ This app visualizes Texas 2024 precinct results with interactive hovers, county 
 - intro.js for guide UI
 
 ## Examples and Other Visualizations
+### 
 ![alt text](https://github.com/samz-cs/tx-map/blob/main/hisp_shift.png?raw=true)
+Each block represents a voting precinct. The height shows the precinct’s Hispanic population percentage — taller columns indicate a higher share of Hispanic residents (100% Hispanic being the tallest). The color shows how the precinct’s vote shifted from 2020 to 2024: Bluer precincts moved more Democratic, while redder precincts shifted more Republican.
+
+#### Settings for this map
+- Color mode: Shift 
+- 3D metric: Hispanic%
+- Max height (m): 60,000
+- Contrast: 3
 
 

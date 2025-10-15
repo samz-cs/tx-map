@@ -46,6 +46,7 @@ Each block represents a voting precinct. The height shows the precinct’s Hispa
 src="https://github.com/samz-cs/tx-map/blob/d37aeb9f4df708122c99f7678dd3c93b85a48509/acc_hisp_inc_2D_bin.png"
 width="80%"
 />
+
 Each cell shows the 2020 to 2024 shift for all precincts that match the row (income range) and column (hispanic VAP %) values. 
 - Moving up the grid: shifts are more Republican
 - Moving left to right on the grid: shifts are less pronounced

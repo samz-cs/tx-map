@@ -18,7 +18,7 @@ This app visualizes Texas 2024 precinct results with interactive hovers, county 
   - Each filter has an operator (>) or (<) and a percent value.
   - Leave a value blank to ignore that filter.
   - Press Enter in a field or click “Apply” to filter.
-  - Click “Clear” to reset values and return to statewide totals.
+  - Click “Clear” to reset values and show.
 - Available filter fields (percentages computed from the CSV):
   - Hisp% = hispvap / vap
   - Asian% = asianvap / vap
@@ -55,8 +55,11 @@ The following graphs and plots were made directly from the map or with data from
 
 Each block represents a voting precinct. The height shows the precinct’s Hispanic population percentage — taller columns indicate a higher share of Hispanic residents (100% Hispanic being the tallest). The color in the map shows how the precinct’s vote shifted from 2020 to 2024: Bluer precincts moved more Democratic, while redder precincts shifted more Republican.
 
-### Generally, Hispanic areas with lower household incomes shifted right more than Hispanic areas with higher incomes
-![alt text](https://github.com/samz-cs/tx-map/blob/main/2D_Bin_income_hisp.png?raw=true)
+### Generally, Hispanic areas with lower household income shifted right more than Hispanic areas with higher houdehold income
+![alt text](https://github.com/samz-cs/tx-map/blob/d37aeb9f4df708122c99f7678dd3c93b85a48509/acc_hisp_inc_2D_bin.png)
+Each cell shows the 2020 to 2024 shift for all precincts that match the row (income range) and column (hispanic VAP %) values. 
+- Moving up the grid: shifts are more Republican
+- Moving left to right on the grid: shifts are less pronounced
 
 ### Areas with high Black concentrations remain Democratic strongholds
 ![alt text](https://github.com/samz-cs/tx-map/blob/main/black_margin_200k_5_100votes.png?raw=true)

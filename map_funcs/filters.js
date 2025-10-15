@@ -22,6 +22,7 @@ export function compileFilterFromUI() {
   const incOp = get('f-avg_hh_income-op')?.value; const incVal = readNum('f-avg_hh_income-val');
   const shiftOp = get('f-shift-op')?.value; const shiftVal = readNum('f-shift-val');
   const totalOp = get('f-total-op')?.value; const totalVal = readNum('f-total-val');
+  const turnoutOp = get('f-turnout-op')?.value; const turnoutVal = readNum('f-turnout-val');
 
   return function predicateForGeoid(geoid) {
     const row = csvByGeoid.get(String(geoid));
@@ -38,6 +39,7 @@ export function compileFilterFromUI() {
     const r24 = n(row['votes_rep']);
     const t24 = n(row['votes_total']);
     const marginPct = t24 > 0 ? ((d24 - r24) / t24) * 100 : 0;
+    const turnoutPct = vap > 0 ? (t24 / vap) * 100 : 0;
     // shift from 2020 margin% to 2024 margin%
     const dem20 = n(row['20_biden']);
     const rep20 = n(row['20_trump']);
@@ -61,7 +63,8 @@ export function compileFilterFromUI() {
       cmp(bachOp, bachplus, bachVal) &&
       cmp(incOp, income, incVal) &&
       cmp(shiftOp, shift2020to2024, shiftVal) &&
-      cmp(totalOp, t24, totalVal)
+      cmp(totalOp, t24, totalVal) &&
+      cmp(turnoutOp, turnoutPct, turnoutVal)
     );
   };
 }
@@ -89,7 +92,7 @@ export function applyMapFilters() {
 export function initFilterBindings() {
   const inputs = [
     'f-hisp-op','f-hisp-val','f-asian-op','f-asian-val','f-black-op','f-black-val','f-anglo-op','f-anglo-val','f-margin-op','f-margin-val','f-college-op','f-college-val','f-bach-op','f-bach-val',
-    'f-avg_hh_income-op','f-avg_hh_income-val','f-shift-op','f-shift-val','f-total-op','f-total-val'
+    'f-avg_hh_income-op','f-avg_hh_income-val','f-shift-op','f-shift-val','f-total-op','f-total-val','f-turnout-op','f-turnout-val'
   ];
   const apply = () => { appState.currentFilter = compileFilterFromUI(); applyMapFilters(); };
   inputs.forEach(id => {

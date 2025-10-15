@@ -46,7 +46,7 @@ Each cell shows the 2020 to 2024 shift for all precincts that match the row (inc
 - Moving left to right on the grid: shifts are less pronounced
 
 ### Areas with high Black concentrations remain Democratic strongholds
-![alt text](https://github.com/samz-cs/tx-map/blob/main/black_margin_200k_5_100votes.png?raw=true)
+![alt text](https://github.com/samz-cs/tx-map/blob/main/black_margin_200k_5_100votes_25.png?raw=true)
 #### Settings for this map
 - Color mode: Dem Margin
 - Filters: > 100 votes
@@ -55,7 +55,7 @@ Each cell shows the 2020 to 2024 shift for all precincts that match the row (inc
 - Contrast: 5
 
 ### However, Democrats also lost many voters in those same areas
-![alt text](https://github.com/samz-cs/tx-map/blob/main/black_shift_200k_5_100votes.png?raw=true)
+![alt text](https://github.com/samz-cs/tx-map/blob/main/black_shift_200k_5_100votes_25.png?raw=true)
 #### Settings for this map
 - Color mode: Shift
 - Filters: > 100 votes
@@ -67,7 +67,7 @@ Each cell shows the 2020 to 2024 shift for all precincts that match the row (inc
 ![alt text](https://github.com/samz-cs/tx-map/blob/main/WLS_edu_turnout.png?raw=true)
 
 County-level analysis was chosen for this plot because turnout in precincts varies a lot depending on its location within the community. Certain areas may not have a lot of residents, but could have a polling place that is easily accessible by people who do not live in the precinct. For example, the precinct below had a polling location in a middle school. The VAP turnout was more than 200%.
-![alt text](https://github.com/samz-cs/tx-map/blob/main/DS_example.png?raw=true)
+![alt text](https://github.com/samz-cs/tx-map/blob/main/DS_example_25.png?raw=true)
 
 ### Democratic Support held the strongest in highly educated precincts
 ![alt text](https://github.com/samz-cs/tx-map/blob/main/binned_shift_edu.png?raw=true)

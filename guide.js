@@ -102,6 +102,12 @@ window.startGuide = function startGuide() {
       Use a higher value when metrics are similar in height and you want to see more difference.
       `,
       position: 'top'
+    },
+    {
+      element: document.querySelector('#threeDClear'),
+      intro: `Press Clear to go back to 2D mode.`,
+      position: 'left'
+      
     }
   ];
 

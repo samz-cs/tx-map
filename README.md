@@ -16,8 +16,8 @@ This [interactive app](https://samz-cs.github.io/tx-map/) visualizes the 2024 Pr
 
 
 ## Data sources
-- Race demographic data is from the Texas Legislative Council's [website](https://data.capitol.texas.gov/dataset/vtds)
-- Precinct shapes and election results are from the Texas data set of the NYT's [Github](https://github.com/nytimes/presidential-precinct-map-2024)
+- Race demographic data is from the Texas Legislative Council's [website](https://data.capitol.texas.gov/dataset/vtds).
+- Precinct shapes and election results are from the Texas data set of the NYT's [Github](https://github.com/nytimes/presidential-precinct-map-2024).
 - college enrollment, income, and educational attainment data are from Census tracts and blocks obtained from the NHGIS datasets [here](https://data2.nhgis.org/main). Census block and tract shapes used for calculations were also from here.
 - Dasymetric mapping was used to distribute demographic populations in precincts from Census blocks and tracts.
 
@@ -40,9 +40,9 @@ width="80%"
 - Max height (m): 60,000
 - Contrast: 3
 
-Each block represents a voting precinct. The height shows the precinct’s Hispanic population percentage — taller precincts indicate a higher share of Hispanic residents (a precinct with 100% Hispanic residents being the tallest). The color in the map shows how the precinct’s vote shifted from 2020 to 2024: Bluer precincts moved more Democratic, while redder precincts shifted more Republican.
+Each block represents a voting precinct. The height metric chosen for this map was Hispanic%. The height of a precinct shows its Hispanic population percentage — taller precincts indicate a higher share of Hispanic residents (a precinct with 100% Hispanic residents being the tallest). The color in the map shows how the precinct’s vote shifted from 2020 to 2024: Bluer precincts moved more Democratic, while redder precincts shifted more Republican.
 
-### Generally, holding Hispanic share constant, lower-income precincts moved further right than higher-income precincts.
+### Generally, holding Hispanic share constant, lower-income precincts became more Republican than higher-income precincts.
 <img
 src="https://github.com/samz-cs/tx-map/blob/d37aeb9f4df708122c99f7678dd3c93b85a48509/acc_hisp_inc_2D_bin.png"
 width="70%"
@@ -52,7 +52,7 @@ Each cell shows the 2020 to 2024 shift for all precincts that match the row (inc
 - Moving up the grid: shifts are more Republican
 - Moving left to right on the grid: shifts are less pronounced
 
-### Areas with high Black concentrations remain Democratic strongholds
+### Precincts with high Black concentrations remain Democratic strongholds
 <img
 src="https://github.com/samz-cs/tx-map/blob/main/black_margin_200k_5_100votes.png?raw=true"
 width="80%"
@@ -96,4 +96,4 @@ src="https://github.com/samz-cs/tx-map/blob/main/binned_shift_edu.png?raw=true"
 width="80%"
 />
 
-This plot uses binned regression. Precincts were divided into equally sized groups or "bins" based on the independent variable (in this case, college educated %). The point in each bin represents the bin's mean. In this plot, bins that were more college educated shifted less to the right compared to bins that were less college educated.
+This plot uses binned regression. Precincts were divided into equally sized groups or "bins" based on the independent variable (in this case, college educated %). The point in each bin represents the bin's mean. In this plot, bins that were more college educated showed smaller shifts towards Republican compared to bins that were less college educated.

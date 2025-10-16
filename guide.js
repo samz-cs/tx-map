@@ -70,7 +70,7 @@ window.startGuide = function startGuide() {
     // Combined highlight step (adds secondary outline to zoom box)
     {
       element: document.querySelector('#hoverBox'),
-      intro: `Hover + Zoom together: Below zoom 8 it shows County info; above 8 it shows Precinct info.`,
+      intro: `Hover + Zoom together: Zoom < 8 it shows County info; zoom > 8 it shows Precinct info.`,
       position: 'right',
       hoverZoomCombined: true
     },
@@ -88,7 +88,8 @@ window.startGuide = function startGuide() {
     // 3D Height controls
     {
       element: document.querySelector('#threeDMaxHeight'),
-      intro: 'Height controls: Max height sets the tallest precinct.',
+      intro: `Height controls: Max height sets the tallest precinct. <br>
+      Increase max height when zooming out. Decrease when viewing smaller areas.`,
       position: 'top'
     },
     // 3D Contrast control

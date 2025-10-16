@@ -28,7 +28,7 @@ This [interactive app](https://samz-cs.github.io/tx-map/) visualizes the 2024 Pr
 - intro.js for guide UI
 
 ## Examples and Other Visualizations
-The following graphs and plots were made directly from the map or with data from the map.
+The following graphs and plots were made directly from the map or with data used to make the map.
 ### Across the state, areas with high Hispanic concentrations shifted towards the GOP
 <img
 src="https://github.com/samz-cs/tx-map/blob/main/hisp_shift.png?raw=true"

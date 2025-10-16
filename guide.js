@@ -26,9 +26,9 @@ window.startGuide = function startGuide() {
   const steps = [
     {
       element: document.querySelector('#map'),
-      intro: `Navigation: <br> 1. Left-click hold and drag to move, <br> 
+      intro: `Navigation: <br> 1. Left-click hold and drag to move <br> 
       2. Scroll to zoom <br> 
-      3. Right-click hold (two finger click on Mac) and drag to rotate/tilt.`,
+      3. Right-click hold (two finger click on Mac) and drag to rotate/tilt`,
       position: 'left'
     },
     // Color mode overview
@@ -41,14 +41,14 @@ window.startGuide = function startGuide() {
       element: (function(){ const el = document.querySelector('#colorModeBox input[value="margin"]'); return el ? el.parentElement : document.querySelector('#colorModeBox'); })(),
       intro: `Dem Margin: colors indicate margin of victory. <br>
       Deeper blue = larger Dem margin <br>
-      Deeper red = larger Rep margin.`
+      Deeper red = larger Rep margin`
     },
     // Shift focused step (outline only the Shift radio control)
     {
       element: (function(){ const el = document.querySelector('#colorModeBox input[value="shift"]'); return el ? el.parentElement : document.querySelector('#colorModeBox'); })(),
       intro: `Shift (20→24): shows margin change from 2020 to 2024. <br>
-      Blue = moved toward Dem; <br>
-      Red = moved toward Rep.`
+      Blue = moved toward Dem <br>
+      Red = moved toward Rep`
     },
     {
       element: document.querySelector('#filterBox'),

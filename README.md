@@ -40,7 +40,7 @@ width="80%"
 - Max height (m): 60,000
 - Contrast: 3
 
-Each block represents a voting precinct. The height shows the precinct’s Hispanic population percentage — taller columns indicate a higher share of Hispanic residents (100% Hispanic being the tallest). The color in the map shows how the precinct’s vote shifted from 2020 to 2024: Bluer precincts moved more Democratic, while redder precincts shifted more Republican.
+Each block represents a voting precinct. The height shows the precinct’s Hispanic population percentage — taller precincts indicate a higher share of Hispanic residents (a precinct with 100% Hispanic residents being the tallest). The color in the map shows how the precinct’s vote shifted from 2020 to 2024: Bluer precincts moved more Democratic, while redder precincts shifted more Republican.
 
 ### Generally, at similar Hispanic population levels, lower-income areas shifted further to the right than higher-income areas.
 <img
@@ -95,3 +95,5 @@ width="80%"
 src="https://github.com/samz-cs/tx-map/blob/main/binned_shift_edu.png?raw=true"
 width="80%"
 />
+
+This plot uses binned regression. The precincts divided into equally sized groups or "bins" based on the independent variable (in this case, college educated %). The point in each bin represents the bin's mean. In this plot, bins that were more college educated shifted less to the right compared to bins that were less college educated.

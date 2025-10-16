@@ -19,6 +19,7 @@ This interactive app visualizes the 2024 Presidential election in Texas with pre
 - Race demographic data is from the Texas Legislative Council's [website](https://data.capitol.texas.gov/dataset/vtds)
 - Precinct shapes and election results are from the Texas data set of the NYT's [Github](https://github.com/nytimes/presidential-precinct-map-2024)
 - college enrollment, income, and educational attainment data are from Census tracts and blocks obtained from the NHGIS datasets [here](https://data2.nhgis.org/main). Census block and tract shapes used for calculations were also from here.
+- Dasymetric mapping was used to distribute demographic populations in precincts from Census blocks and tracts.
 
 ## Tech Stack
 - JavaScript for UI functionality and MapBox for rendering

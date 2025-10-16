@@ -109,8 +109,13 @@ export async function init(mapboxgl) {
     const updateZoomIndicator = () => {
       const box = document.getElementById('zoomBox');
       if (box) box.textContent = `Zoom: ${map.getZoom().toFixed(1)}`;
-      const notice = document.getElementById('zoomNotice');
-      if (notice) notice.style.display = map.getZoom() < 5 ? 'block' : 'none';
+
+      const warn = document.getElementById('zoomWarning');
+      if (warn) {
+        const show = map.getZoom() < 5;
+        warn.style.display = show ? 'block' : 'none';
+      }
+
       // clear conflicting outlines when crossing threshold
       if (map.getZoom() > 8) {
         try { map.setFilter('county-hover-outline', ['==', ['get', 'GEOID'], '']); } catch {}

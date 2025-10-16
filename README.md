@@ -96,4 +96,4 @@ src="https://github.com/samz-cs/tx-map/blob/main/binned_shift_edu.png?raw=true"
 width="80%"
 />
 
-This plot uses binned regression. The precincts divided into equally sized groups or "bins" based on the independent variable (in this case, college educated %). The point in each bin represents the bin's mean. In this plot, bins that were more college educated shifted less to the right compared to bins that were less college educated.
+This plot uses binned regression. Precincts were divided into equally sized groups or "bins" based on the independent variable (in this case, college educated %). The point in each bin represents the bin's mean. In this plot, bins that were more college educated shifted less to the right compared to bins that were less college educated.

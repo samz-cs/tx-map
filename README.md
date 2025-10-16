@@ -42,7 +42,7 @@ width="80%"
 
 Each block represents a voting precinct. The height shows the precinct’s Hispanic population percentage — taller precincts indicate a higher share of Hispanic residents (a precinct with 100% Hispanic residents being the tallest). The color in the map shows how the precinct’s vote shifted from 2020 to 2024: Bluer precincts moved more Democratic, while redder precincts shifted more Republican.
 
-### Generally, at similar Hispanic population levels, lower-income areas shifted further to the right than higher-income areas.
+### Generally, holding Hispanic share constant, lower-income precincts moved further right than higher-income precincts.
 <img
 src="https://github.com/samz-cs/tx-map/blob/d37aeb9f4df708122c99f7678dd3c93b85a48509/acc_hisp_inc_2D_bin.png"
 width="70%"

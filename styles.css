@@ -135,7 +135,7 @@ body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, Se
 #guideBtn {
   position: absolute;
   left: 12px;
-  bottom: 56px; /* place above #zoomBox (which sits at bottom:12px) */
+  bottom: 90px; 
   z-index: 3;
   background: #2a6db0;
   color: #fff;
@@ -143,8 +143,26 @@ body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, Se
   padding: 8px 12px;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 13px;
 }
 #guideBtn:hover { background: #245f98; }
+
+#aboutBtn {
+  position: absolute;
+  left: 12px;
+  bottom: 50px; /* tighter gap above zoom (12px) */
+  z-index: 3;
+  background: #2a6db0;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+}
+#aboutBtn:hover { background: #245f98; }
 
 /* Allow interacting with the map while intro overlay is shown */
 .introjs-overlay { pointer-events: none !important; }

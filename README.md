@@ -79,7 +79,7 @@ width="80%"
 
 ### Counties with high College-Educated concentrations had higher turnout
 <img
-src="https://github.com/samz-cs/tx-map/blob/main/WLS_edu_turnout.png?raw=true"
+src="https://github.com/samz-cs/tx-map/blob/main/OLS_edu_turnout.png?raw=true"
 width="80%"
 />
 
